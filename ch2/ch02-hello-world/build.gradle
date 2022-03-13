@@ -1,0 +1,35 @@
+group 'com.apress.prospring5.ch02'
+apply plugin: 'java'
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	springVersion = '5.0.0.RELEASE'
+}
+
+tasks.withType(JavaCompile) {
+	options.encoding = "UTF-8"
+}
+
+/*Task that copies all the dependencies under build/libs */
+task copyDependencies(type: Copy) {
+	from configurations.compile
+	into 'build/libs'
+}
+
+dependencies {
+	compile group: 'org.springframework', name: 'spring-context', version: '5.3.16'
+}
+
+jar {
+	manifest {
+		attributes(
+				"Created-By": "Iuliana Cosmina",
+				"Specification-Title": "Pro Spring 5",
+				"Main-Class" : "com.apress.prospring4.ch2.HelloWorldSpringDI",
+				"Class-Path": configurations.compile.collect { it.getName() }.join(' ')
+		)
+	}
+}

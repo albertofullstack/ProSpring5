@@ -9,5 +9,4 @@ public class HelloWorldDecoupled {
 		mr.setMessageProvider(mp);
 		mr.render();
 	}
-
 }

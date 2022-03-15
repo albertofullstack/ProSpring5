@@ -6,7 +6,7 @@ public class DeclareSpringComponents {
 	
     public static void main(String[] args) {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
-        ctx.load("classpath:META-INF/spring/app-context-xml.xml");
+        ctx.load("classpath:META-INF/spring/annotation.xml");
         ctx.refresh();
 
         MessageRenderer messageRenderer = ctx.getBean("messageRenderer", MessageRenderer.class);

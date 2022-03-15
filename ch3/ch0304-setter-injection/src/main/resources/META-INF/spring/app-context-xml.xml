@@ -16,5 +16,10 @@
     <bean id="messageProvider2"
           class="com.apress.prospring4.ch3.xml.ConfigurableMessageProvider">
           <constructor-arg value="I hope that someone gets my message in a bottle"/>
-    </bean>      
+    </bean>     
+    
+    <bean id="constructorConfusion"
+          class="com.apress.prospring4.ch3.xml.ConstructorConfusion">
+        <constructor-arg type="int" value="90"/>
+    </bean> 
 </beans>

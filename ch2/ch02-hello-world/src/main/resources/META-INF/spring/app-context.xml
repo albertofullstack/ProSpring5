@@ -8,4 +8,6 @@
 
     <bean id="renderer" class="com.apress.prospring4.ch2.decoupled.StandardOutMessageRenderer"
           p:messageProvider-ref="provider"/>
+          
+    <bean id="messageProvider" class="com.apress.prospring4.ch2.decoupled.HelloWorldMessageProvider"/>
 </beans>

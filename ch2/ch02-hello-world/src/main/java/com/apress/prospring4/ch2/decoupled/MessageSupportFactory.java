@@ -12,15 +12,15 @@ public class MessageSupportFactory {
 	
 	private MessageSupportFactory() {
 		props = new Properties();
-		String rendererClass = props.getProperty("renderer.class");
-		String providerClass = props.getProperty("provider.class");
 		
 		try {
 			props.load(this.getClass().getResourceAsStream("msf.properties"));
+
+			String rendererClass = props.getProperty("renderer.class");
+			String providerClass = props.getProperty("provider.class");
 			
 			renderer = (MessageRenderer) Class.forName(rendererClass).getDeclaredConstructor().newInstance();
 			provider = (MessageProvider) Class.forName(providerClass).getDeclaredConstructor().newInstance();
-			props.load(this.getClass().getResourceAsStream("/msf.properties"));
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}

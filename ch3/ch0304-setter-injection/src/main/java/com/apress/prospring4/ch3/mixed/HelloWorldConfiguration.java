@@ -1,4 +1,4 @@
-package com.apress.prospring4.ch3.annotation;
+package com.apress.prospring4.ch3.mixed;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;

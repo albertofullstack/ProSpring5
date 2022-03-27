@@ -8,7 +8,7 @@
 
     <bean id="messageRenderer"
           class="com.apress.prospring4.ch3.xml.StandardOutMessageRenderer"
-          p:messageProvider-ref="messageProvider2"/>
+          p:messageProvider-ref="messageProvider"/>
 
     <bean id="messageProvider"
           class="com.apress.prospring4.ch3.xml.HelloWorldMessageProvider"/>

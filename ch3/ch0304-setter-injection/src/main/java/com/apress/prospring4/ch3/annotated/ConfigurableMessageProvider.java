@@ -20,5 +20,4 @@ public class ConfigurableMessageProvider implements MessageProvider {
 	public String getMessage() {
 		return message;
 	}
-
 }

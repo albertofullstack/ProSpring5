@@ -11,6 +11,9 @@ public class DeclareSpringComponents {
         	
         	MessageRenderer messageRenderer = ctx.getBean("messageRenderer", MessageRenderer.class);
         	messageRenderer.render();
+        	
+        	MessageProvider messageProvider = ctx.getBean("provider", MessageProvider.class);
+        	System.out.println(messageProvider.getMessage());
         }
     }
 }
